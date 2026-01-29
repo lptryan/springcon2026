@@ -43,6 +43,48 @@ body {
   font-family: var(--font-body);
   color: #333;
   line-height: 1.6;
+
+  /* BACKGROUND ANIMATION SETUP */
+  min-height: 100vh;
+  position: relative;
+  background-color: transparent !important;
+  /* Ensure layers show through */
+}
+
+/* Base Gradient Layer */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #575aa7, #7f2e8b);
+  z-index: -2;
+}
+
+/* Pulse Gradient Layer (Darker) */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #3b3e75, #592061);
+  z-index: -1;
+  opacity: 0;
+  animation: gradient-pulse 4s ease-in-out infinite alternate;
+}
+
+@keyframes gradient-pulse {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 a {
