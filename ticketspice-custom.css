@@ -1,15 +1,19 @@
 /**
  * TicketSpice Customization Template
  * 
- * This file serves as a starting point for customizing TicketSpice event pages.
- * Since TicketSpice does not publish a comprehensive class reference, use your
- * browser's Developer Tools (Right-click -> Inspect) to find specific selectors.
+ * AUTOMATED LOADING:
+ * To load this file automatically from GitHub, paste the following line into
+ * the "Custom CSS" field in your TicketSpice Design Settings:
  * 
- * USAGE:
- * 1. Host this file externally or copy the contents into the "Custom CSS" 
- *    field in your TicketSpice page Design Settings.
- * 2. Use !important sparingly, but it may be necessary to override inline styles
- *    or high-specificity default styles.
+ * @import url('https://cdn.jsdelivr.net/gh/lptryan/springcon2026@main/ticketspice-custom.css');
+ * 
+ * ---------------------------------------------------------------------
+ * 
+ * MANUAL USAGE:
+ * If you prefer manual updates, copy the contents below this block into
+ * the "Custom CSS" field.
+ * 
+ * Reference: Use browser Dev Tools to find specific selectors.
  */
 
 /* =========================================
@@ -17,14 +21,15 @@
    ========================================= */
 :root {
   /* Brand Colors */
-  --brand-primary: #000000; /* Replace with brand color */
+  --brand-primary: #000000;
+  /* Replace with brand color */
   --brand-secondary: #333333;
   --brand-accent: #ff0000;
-  
+
   /* Typography */
   --font-heading: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --font-body: 'Open Sans', Arial, sans-serif;
-  
+
   /* Layout */
   --page-max-width: 1200px;
   --section-padding: 40px;
@@ -52,16 +57,29 @@ a:hover {
 /* =========================================
    3. TYPOGRAPHY
    ========================================= */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   font-weight: 700;
   margin-bottom: 1rem;
   color: var(--brand-primary);
 }
 
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.75rem; }
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
 
 /* =========================================
    4. LAYOUT COMPONENTS
@@ -69,14 +87,15 @@ h3 { font-size: 1.75rem; }
 
 /* Header / Banner Area */
 /* Note: Inspect element to find the specific header class used by your theme */
-.header-container, 
+.header-container,
 div[class*="header"] {
+  /* Placeholder for header styles */
   /* background-color: var(--brand-primary); */
   /* color: white; */
 }
 
 /* Content Wrapper */
-.wrapper, 
+.wrapper,
 .container {
   max-width: var(--page-max-width);
   margin: 0 auto;
@@ -90,9 +109,9 @@ div[class*="header"] {
 */
 
 /* Buttons */
-button, 
-.btn, 
-input[type="submit"], 
+button,
+.btn,
+input[type="submit"],
 input[type="button"] {
   background-color: var(--brand-primary) !important;
   color: white !important;
@@ -105,9 +124,9 @@ input[type="button"] {
   transition: all 0.3s ease;
 }
 
-button:hover, 
-.btn:hover, 
-input[type="submit"]:hover, 
+button:hover,
+.btn:hover,
+input[type="submit"]:hover,
 input[type="button"]:hover {
   background-color: var(--brand-secondary) !important;
   transform: translateY(-2px);
@@ -129,7 +148,7 @@ select:focus,
 textarea:focus {
   border-color: var(--brand-primary);
   outline: none;
-  box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
 }
 
 /* Ticket Blocks / Selection Area */
@@ -138,20 +157,38 @@ textarea:focus {
 /* =========================================
    6. UTILITIES / HELPERS
    ========================================= */
-.text-center { text-align: center; }
-.text-right { text-align: right; }
-.hidden { display: none !important; }
-.mobile-only { display: none; }
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.mobile-only {
+  display: none;
+}
 
 /* =========================================
    7. MEDIA QUERIES
    ========================================= */
 @media (max-width: 768px) {
-  .mobile-only { display: block; }
-  .desktop-only { display: none; }
-  
-  h1 { font-size: 2rem; }
-  
+  .mobile-only {
+    display: block;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
   .container {
     padding-left: 15px;
     padding-right: 15px;
