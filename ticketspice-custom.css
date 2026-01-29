@@ -51,16 +51,31 @@ body {
   /* Ensure layers show through */
 }
 
+/* NUCLEAR TRANSPARENCY OPTION */
+/* Force all potential wrappers to be clear so body background shows */
+html,
+.wrapper,
+.container,
+.main-content,
+#page-wrapper,
+div[class*="layout"],
+div[class*="content"],
+div[class*="section"],
+div[class*="row"] {
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
 /* Base Gradient Layer */
 body::before {
   content: "";
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background: linear-gradient(to bottom, #575aa7, #7f2e8b);
-  z-index: -2;
+  z-index: -10;
 }
 
 /* Pulse Gradient Layer (Darker) */
@@ -132,11 +147,24 @@ h3 {
 
 /* Header / Banner Area */
 /* Note: Inspect element to find the specific header class used by your theme */
+/* Header / Banner Area */
+/* Note: Inspect element to find the specific header class used by your theme */
 .header-container,
-div[class*="header"] {
-  /* Placeholder for header styles */
-  /* background-color: var(--brand-primary); */
-  /* color: white; */
+div[class*="header"],
+.banner__background,
+.banner {
+  background: #e6e6fa !important;
+  /* Light Purple (Lavender) */
+  background-color: #e6e6fa !important;
+  color: #000000 !important;
+  /* Black Text */
+}
+
+.banner__background h1,
+.banner__background h2,
+.banner h1,
+.banner h2 {
+  color: #000000 !important;
 }
 
 /* Content Wrapper */
@@ -153,12 +181,67 @@ div[class*="header"] {
    Common patterns often include 'txn-', 'field-', or 'btn-' prefixes.
 */
 
-/* Buttons */
+/* =========================================
+   7. COUPON CODE SECTION
+   ========================================= */
+/* Target the coupon section container */
+/* =========================================
+   7. COUPON CODE SECTION
+   ========================================= */
+/* Target the coupon section container */
+.holds-coupon-code {
+  background-color: #f0f0f0 !important;
+  /* Light Grey */
+  padding: 20px !important;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.holds-coupon-code label {
+  color: #333333 !important;
+  /* Switch text to dark for light bg */
+}
+
+/* Coupon Code Input Area (Dark Gradient) */
+.field-codeBox,
+.code-box-wrapper {
+  background: linear-gradient(to bottom, #333333, #000000) !important;
+  padding: 15px;
+  border-radius: 4px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* =========================================
+   8. TICKET BLOCK (Dark Purple)
+   ========================================= */
+.ticket-block,
+.level-container,
+.ticket-level {
+  background-color: #2a0e35 !important;
+  /* Dark Purple */
+  color: white !important;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.ticket-block h4,
+.ticket-block .ticket-cost {
+  color: #ffffff !important;
+}
+
+/* =========================================
+   9. BUTTON STYLES
+   ========================================= */
+/* Target all buttons */
 button,
 .btn,
 input[type="submit"],
-input[type="button"] {
-  background-color: var(--brand-primary) !important;
+input[type="button"],
+.holds-coupon-code button {
+  background-color: #007bff !important;
+  /* Bright Blue */
   color: white !important;
   border: none !important;
   padding: 12px 24px !important;
@@ -166,6 +249,7 @@ input[type="button"] {
   font-weight: 600 !important;
   text-transform: uppercase;
   cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5) !important;
   transition: all 0.3s ease;
 }
 
@@ -173,8 +257,9 @@ button:hover,
 .btn:hover,
 input[type="submit"]:hover,
 input[type="button"]:hover {
-  background-color: var(--brand-secondary) !important;
+  background-color: #0056b3 !important;
   transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.6) !important;
 }
 
 /* Form Fields */
@@ -188,38 +273,8 @@ textarea {
   border-radius: 4px;
 }
 
-input:focus,
-select:focus,
-textarea:focus {
-  border-color: var(--brand-primary);
-  outline: none;
-  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
-}
-
-/* Ticket Blocks / Selection Area */
-/* Look for classes like .ticket-level or .level-container */
-
 /* =========================================
-   6. UTILITIES / HELPERS
-   ========================================= */
-.text-center {
-  text-align: center;
-}
-
-.text-right {
-  text-align: right;
-}
-
-.hidden {
-  display: none !important;
-}
-
-.mobile-only {
-  display: none;
-}
-
-/* =========================================
-   7. MEDIA QUERIES
+   9. MEDIA QUERIES
    ========================================= */
 @media (max-width: 768px) {
   .mobile-only {
