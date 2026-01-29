@@ -2,10 +2,11 @@
  * TicketSpice Customization Template
  * 
  * AUTOMATED LOADING:
- * To load this file automatically from GitHub, paste the following line into
- * the "Custom CSS" field in your TicketSpice Design Settings:
+ * The @import method is not supported by TicketSpice's CSS editor.
+ * Instead, use the "HTML" element in your page builder/header.
  * 
- * @import url('https://cdn.jsdelivr.net/gh/lptryan/springcon2026@main/ticketspice-custom.css');
+ * Paste the following code into an HTML block:
+ * <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lptryan/springcon2026@main/ticketspice-custom.css">
  * 
  * ---------------------------------------------------------------------
  * 
