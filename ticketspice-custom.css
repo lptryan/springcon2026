@@ -181,6 +181,42 @@ div[class*="header"],
    Common patterns often include 'txn-', 'field-', or 'btn-' prefixes.
 */
 
+/* --- SECTION HIGHLIGHTS (DEBUG/CUSTOM) --- */
+
+/* Registrants Section */
+section#registrants {
+  background-color: yellow !important;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* Billing Section */
+section#billing-section {
+  background-color: green !important;
+  color: white !important;
+  /* Ensure text is readable on green */
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* Submit Button Row */
+.submit-row {
+  background-color: pink !important;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+/* WC Logos Container */
+.holds-wc-logos {
+  max-width: 100% !important;
+  background-color: black !important;
+  padding: 10px;
+  text-align: center;
+}
+
 /* =========================================
    7. COUPON CODE SECTION
    ========================================= */
@@ -202,25 +238,38 @@ div[class*="header"],
   /* Switch text to dark for light bg */
 }
 
-/* Coupon Code Input Area (Dark Gradient) */
+/* Coupon Code Input Area (Dark Grey) */
 .field-codeBox,
 .code-box-wrapper {
-  background: linear-gradient(to bottom, #333333, #000000) !important;
+  background-color: #333333 !important;
+  /* Dark Grey */
+  background: #333333 !important;
   padding: 15px;
   border-radius: 4px;
   color: white;
   margin-bottom: 15px;
 }
 
+/* Specific Dimension Control for Ticket Block Wrapper */
+div#ticketBlock {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding-left: 9% !important;
+  padding-right: 9% !important;
+  box-sizing: border-box;
+  /* Ensure padding doesn't overflow width */
+}
+
 /* =========================================
-   8. TICKET BLOCK (Dark Purple)
+   8. TICKET BLOCK (Light Green)
    ========================================= */
 .ticket-block,
 .level-container,
 .ticket-level {
-  background-color: #2a0e35 !important;
-  /* Dark Purple */
-  color: white !important;
+  background-color: #d4edda !important;
+  /* Light Green */
+  color: #000000 !important;
+  /* Black Text */
   padding: 20px;
   border-radius: 8px;
   margin-bottom: 20px;
@@ -228,7 +277,36 @@ div[class*="header"],
 
 .ticket-block h4,
 .ticket-block .ticket-cost {
-  color: #ffffff !important;
+  color: #000000 !important;
+}
+
+/* Purchase Protection Field */
+.field-purchaseProtection.registrant-field.field-registrant-5 {
+  background-color: grey !important;
+  padding: 15px;
+  border-radius: 4px;
+  color: white;
+  /* Assume white text on grey for readability */
+}
+
+/* Fix Iframe Centering in Field Registrant 5, 6, 7 */
+.field-html.registrant-field.field-registrant-5,
+.field-html.registrant-field.field-registrant-5 .html,
+.field-html.registrant-field.field-registrant-6,
+.field-html.registrant-field.field-registrant-6 .html,
+.field-html.registrant-field.field-registrant-7,
+.field-html.registrant-field.field-registrant-7 .html {
+  width: 100% !important;
+  text-align: center !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.field-html.registrant-field.field-registrant-5 iframe,
+.field-html.registrant-field.field-registrant-6 iframe,
+.field-html.registrant-field.field-registrant-7 iframe {
+  margin: 0 auto !important;
+  display: block;
 }
 
 /* =========================================
@@ -292,5 +370,11 @@ textarea {
   .container {
     padding-left: 15px;
     padding-right: 15px;
+  }
+
+  /* Mobile Ticket Block Override */
+  div#ticketBlock {
+    padding-left: 5% !important;
+    padding-right: 5% !important;
   }
 }
