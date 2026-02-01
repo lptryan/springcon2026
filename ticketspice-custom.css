@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Montserrat:wght@700&display=swap');
+
 /**
  * TicketSpice Customization Template
  * 
@@ -6,6 +8,7 @@
  * Instead, use the "HTML" element in your page builder/header.
  * 
  * Paste the following code into an HTML block:
+ * <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Montserrat:wght@700&display=swap" rel="stylesheet">
  * <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lptryan/springcon2026@main/ticketspice-custom.css">
  * 
  * ---------------------------------------------------------------------
@@ -28,8 +31,8 @@
   --brand-accent: #ff0000;
 
   /* Typography */
-  --font-heading: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  --font-body: 'Open Sans', Arial, sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Inter', sans-serif;
 
   /* Layout */
   --page-max-width: 1200px;
@@ -40,7 +43,7 @@
    2. GLOBAL RESETS & DEFAULTS
    ========================================= */
 body {
-  font-family: var(--font-body);
+  font-family: var(--font-body) !important;
   color: #333;
   line-height: 1.6;
 
@@ -103,13 +106,13 @@ body::after {
 }
 
 a {
-  color: var(--brand-primary);
+  color: #007bff !important;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 a:hover {
-  color: var(--brand-accent);
+  color: #0056b3 !important;
 }
 
 /* =========================================
@@ -121,7 +124,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-heading);
+  font-family: var(--font-heading) !important;
   font-weight: 700;
   margin-bottom: 1rem;
   color: var(--brand-primary);
@@ -153,9 +156,8 @@ h3 {
 div[class*="header"],
 .banner__background,
 .banner {
-  background: #e6e6fa !important;
-  /* Light Purple (Lavender) */
-  background-color: #e6e6fa !important;
+  background-color: transparent !important;
+  background: transparent !important;
   color: #000000 !important;
   /* Black Text */
 }
@@ -163,8 +165,24 @@ div[class*="header"],
 .banner__background h1,
 .banner__background h2,
 .banner h1,
-.banner h2 {
-  color: #000000 !important;
+.banner h2,
+.banner_content h1,
+.banner__content h1,
+.banner__holds-content h1,
+.banner__holds-content h1 span,
+.field-banner h1,
+.field-banner h1 span {
+  color: #FFFFFF !important;
+}
+
+/* this is for the field/location banner */
+.field-banner.banner_xef6d8b125ca6f859b727.field-banner--fw {
+  min-height: auto !important;
+}
+
+/* logo holder block */
+div.form-header.header-type-logo.logo-align-center .holds-image {
+  background: linear-gradient(to right, #172856, #284086) !important;
 }
 
 /* Content Wrapper */
@@ -185,20 +203,27 @@ div[class*="header"],
 
 /* Registrants Section */
 section#registrants {
-  background-color: yellow !important;
+  background-color: transparent !important;
   padding: 20px;
   border-radius: 8px;
   margin-bottom: 20px;
 }
 
+.app-container :not(.swal2-container) section#registrants {
+  background-color: transparent !important;
+}
+
 /* Billing Section */
 section#billing-section {
-  background-color: green !important;
+  background-color: transparent !important;
   color: white !important;
-  /* Ensure text is readable on green */
   padding: 20px;
   border-radius: 8px;
   margin-bottom: 20px;
+}
+
+section#billing-section h1 {
+  color: #FFFFFF !important;
 }
 
 /* Submit Button Row */
@@ -241,9 +266,8 @@ section#billing-section {
 /* Coupon Code Input Area (Dark Grey) */
 .field-codeBox,
 .code-box-wrapper {
-  background-color: #333333 !important;
-  /* Dark Grey */
-  background: #333333 !important;
+  background: linear-gradient(to right, #172856, #284086) !important;
+
   padding: 15px;
   border-radius: 4px;
   color: white;
@@ -261,12 +285,12 @@ div#ticketBlock {
 }
 
 /* =========================================
-   8. TICKET BLOCK (Light Green)
+   8. TICKET BLOCK (transparent)
    ========================================= */
 .ticket-block,
 .level-container,
 .ticket-level {
-  background-color: #d4edda !important;
+  background-color: transparent !important;
   /* Light Green */
   color: #000000 !important;
   /* Black Text */
@@ -275,8 +299,42 @@ div#ticketBlock {
   margin-bottom: 20px;
 }
 
+div#ticketBlock {
+  background-color: transparent !important;
+}
+
+.campaign-form:not(.legacy-form) .ticket-block table.holds-tickets th.description {
+  color: #FFFFFF !important;
+  background: linear-gradient(to right, #172856, #284086) !important;
+
+}
+
+th#xa9974eb2f8ba44c04f76_cost {
+  color: #FFFFFF !important;
+}
+
+th#xa9974eb2f8ba44c04f76_cost {
+  background: linear-gradient(to right, #172856, #284086) !important;
+
+}
+
 .ticket-block h4,
 .ticket-block .ticket-cost {
+  color: #000000 !important;
+}
+
+.ticket-block tr.ticket-type p {
+  font-size: .8em;
+  color: #000000 !important;
+}
+
+.ticket-fee {
+  color: #000000 !important;
+}
+
+/* this is the tickets inside ticketblock */
+.campaign-form:not(.legacy-form) .ticket-block table.holds-tickets {
+  background-color: #f5f4f1 !important;
   color: #000000 !important;
 }
 
@@ -287,6 +345,22 @@ div#ticketBlock {
   border-radius: 4px;
   color: white;
   /* Assume white text on grey for readability */
+}
+
+/* this is the purchase protection block */
+.campaign-form:not(.legacy-form) .field-purchaseProtection .purchase-protection {
+  background: linear-gradient(to right, rgba(23, 40, 86, 0.85), rgba(40, 64, 134, 0.85)) !important;
+  backdrop-filter: blur(5px) !important;
+  -webkit-backdrop-filter: blur(5px) !important;
+}
+
+.campaign-form:not(.legacy-form) .field-purchaseProtection .purchase-protection .purchase-protection-header {
+  background: linear-gradient(to right, #172856, #284086) !important;
+  color: #FFFFFF !important;
+}
+
+.campaign-form:not(.legacy-form) .field-purchaseProtection .purchase-protection .purchase-protection-header .recommended {
+  color: #ffffff;
 }
 
 /* Fix Iframe Centering in Field Registrant 5, 6, 7 */
@@ -376,5 +450,9 @@ textarea {
   div#ticketBlock {
     padding-left: 5% !important;
     padding-right: 5% !important;
+  }
+
+  .campaign-form:not(.legacy-form) .field-purchaseProtection .purchase-protection .purchase-protection-body p {
+    color: green !important;
   }
 }
