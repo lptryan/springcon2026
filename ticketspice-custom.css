@@ -182,10 +182,14 @@ div[class*="header"],
 
 .field-banner .banner__holds-content {
   padding-top: 40px;
+  padding-bottom: 0px !important;
+
 }
 
-#root>div.campaign-form.multi-reg.labels-left.rounded-inputs.full-width-fields.undefined>div>form>div.field-banner.banner_xef6d8b125ca6f859b727.field-banner--fw>div.banner__holds-content.standard {
-  display: none !important;
+.app-container :not(.swal2-container) .field-banner .banner__holds-content,
+.form-preview :not(.swal2-container) .field-banner .banner__holds-content {
+  padding-top: 40px;
+  padding-bottom: 0px !important;
 }
 
 .custom-lpticketspice-setting {
@@ -194,16 +198,17 @@ div[class*="header"],
 }
 
 .custom-lpticketspice-date {
-  font-size: 28px;
+  font-size: 2rem;
   font-weight: bold;
   font-style: normal;
   text-align: center !important;
+  margin-bottom: 0px;
 }
 
 .custom-lpticketspice-location {
   color: #FFFFFF;
-  font-size: 28px;
-  font-weight: bold;
+  font-size: 1.75rem;
+  font-weight: normal;
   font-style: normal;
   text-align: center !important;
 }
