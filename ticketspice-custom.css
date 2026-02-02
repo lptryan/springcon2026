@@ -180,6 +180,10 @@ div[class*="header"],
   min-height: auto !important;
 }
 
+.field-banner .banner__holds-content {
+     padding-top: 40px;  
+}
+
 /* logo holder block */
 div.form-header.header-type-logo.logo-align-center .holds-image {
   background: linear-gradient(to right, #172856, #284086) !important;
