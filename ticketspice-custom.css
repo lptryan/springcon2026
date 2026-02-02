@@ -204,13 +204,18 @@ div.form-header.header-type-logo.logo-align-center .holds-image {
 /* Registrants Section */
 section#registrants {
   background-color: transparent !important;
-  padding: 20px;
+
   border-radius: 8px;
   margin-bottom: 20px;
+  margin-top: 0px !important;
+  padding-top: 0px !important;
+  padding-left: 9% !important;
+  padding-right: 9% !important;
 }
 
 .app-container :not(.swal2-container) section#registrants {
   background-color: transparent !important;
+  margin-top: 0px !important;
 }
 
 /* Billing Section */
@@ -226,6 +231,15 @@ section#billing-section h1 {
   color: #FFFFFF !important;
 }
 
+section#billing-section label {
+  color: #ffffff !important;
+}
+
+#billing-section>div:nth-child(5)>div.credit-card-billing.sub-field>div>div {
+  color: red !important;
+  background-color: #ffffff !important;
+}
+
 /* Submit Button Row */
 .submit-row {
   background-color: pink !important;
@@ -237,7 +251,7 @@ section#billing-section h1 {
 /* WC Logos Container */
 .holds-wc-logos {
   max-width: 100% !important;
-  background-color: black !important;
+  background-color: #FFFFFF !important;
   padding: 10px;
   text-align: center;
 }
@@ -281,7 +295,13 @@ div#ticketBlock {
   padding-left: 9% !important;
   padding-right: 9% !important;
   box-sizing: border-box;
+  margin-bottom: 0px !important;
+  padding-bottom: 0px !important;
   /* Ensure padding doesn't overflow width */
+}
+
+#registrants>div.field-codeBox.registrant-field.field-registrant-0 {
+  max-width: 100% !important;
 }
 
 /* =========================================
@@ -303,9 +323,14 @@ div#ticketBlock {
   background-color: transparent !important;
 }
 
+#ticketBlock>table>thead>tr {
+  background: linear-gradient(to right, #172856, #284086) !important;
+}
+
 .campaign-form:not(.legacy-form) .ticket-block table.holds-tickets th.description {
   color: #FFFFFF !important;
-  background: linear-gradient(to right, #172856, #284086) !important;
+  background: linear-gradient(to right, #172856, #20346E) !important;
+
 
 }
 
@@ -314,8 +339,7 @@ th#xa9974eb2f8ba44c04f76_cost {
 }
 
 th#xa9974eb2f8ba44c04f76_cost {
-  background: linear-gradient(to right, #172856, #284086) !important;
-
+  background: linear-gradient(to right, #20346E, #284086) !important;
 }
 
 .ticket-block h4,
@@ -359,6 +383,28 @@ th#xa9974eb2f8ba44c04f76_cost {
   color: #FFFFFF !important;
 }
 
+.purchase-protection-body {
+  color: #FFFFFF !important;
+}
+
+span.purchase-protection-covers__description {
+  color: #ffffff;
+}
+
+.purchase-protection__disclaimer {
+  color: #ffffff;
+}
+
+.campaign-form:not(.legacy-form) .field-purchaseProtection .purchase-protection .purchase-protection-body .purchase-protection-option label {
+  max-width: 100%;
+  padding: 20px;
+  color: #ffffff;
+}
+
+.disclaimer {
+  color: #ffffff !important;
+}
+
 .campaign-form:not(.legacy-form) .field-purchaseProtection .purchase-protection .purchase-protection-header .recommended {
   color: #ffffff;
 }
@@ -381,6 +427,12 @@ th#xa9974eb2f8ba44c04f76_cost {
 .field-html.registrant-field.field-registrant-7 iframe {
   margin: 0 auto !important;
   display: block;
+}
+
+/* hiding these temporarily */
+.field-html.registrant-field.field-registrant-5 iframe,
+.field-html.registrant-field.field-registrant-6 iframe {
+  display: none !important
 }
 
 /* =========================================
@@ -452,7 +504,17 @@ textarea {
     padding-right: 5% !important;
   }
 
-  .campaign-form:not(.legacy-form) .field-purchaseProtection .purchase-protection .purchase-protection-body p {
-    color: green !important;
+  .app-container :not(.swal2-container) section#registrants,
+  .form-preview :not(.swal2-container) section#registrants {
+
+    padding-left: 5% !important;
+    padding-right: 5% !important;
   }
+
+  section#registrants {
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+  }
+
+  .campaign-form:not(.legacy-form) .field-purchaseProtection .purchase-protection .purchase-protection-body p {}
 }
