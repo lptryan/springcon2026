@@ -181,16 +181,25 @@ div[class*="header"],
 }
 
 .field-banner .banner__holds-content {
-     padding-top: 40px;  
+  padding-top: 40px;
 }
 
-.custom-lpticketspice-date {
-   color:#FFFFFF;
-   font-size:28px;
+.custom-lpticketspice-setting {
+  text-align: center;
 }
-.custom-lpticketspice-location {
-   color:#FFFFFF;
-   font-size:28px;
+
+.custom-lpticketspice-date p {
+  color: #FFFFFF;
+  font-size: 28px;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.custom-lpticketspice-location p {
+  color: #FFFFFF;
+  font-size: 28px;
+  font-weight: bold;
+  font-style: normal;
 }
 
 
