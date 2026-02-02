@@ -310,7 +310,9 @@ section#billing-section label {
   color: #333333 !important;
   /* Switch text to dark for light bg */
 }
-
+label#xd6b4c4a0f3dbc6eb6aaa {
+    font-weight: bold !important;
+}
 /* Coupon Code Input Area (Dark Grey) */
 .field-codeBox,
 .code-box-wrapper {
