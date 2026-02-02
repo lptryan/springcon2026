@@ -184,22 +184,28 @@ div[class*="header"],
   padding-top: 40px;
 }
 
+#root>div.campaign-form.multi-reg.labels-left.rounded-inputs.full-width-fields.undefined>div>form>div.field-banner.banner_xef6d8b125ca6f859b727.field-banner--fw>div.banner__holds-content.standard {
+  display: none !important;
+}
+
 .custom-lpticketspice-setting {
-  text-align: center;
+  text-align: center !important;
+  color: #FFFFFF;
 }
 
-.custom-lpticketspice-date p {
+.custom-lpticketspice-date {
+  font-size: 28px;
+  font-weight: bold;
+  font-style: normal;
+  text-align: center !important;
+}
+
+.custom-lpticketspice-location {
   color: #FFFFFF;
   font-size: 28px;
   font-weight: bold;
   font-style: normal;
-}
-
-.custom-lpticketspice-location p {
-  color: #FFFFFF;
-  font-size: 28px;
-  font-weight: bold;
-  font-style: normal;
+  text-align: center !important;
 }
 
 
