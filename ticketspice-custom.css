@@ -340,6 +340,7 @@ div#ticketBlock {
     background-color: #ffffff;
    max-width: 100% !important;
    padding-left: 7.5%;
+   text-align: right;
 }
 
 /* =========================================
@@ -553,13 +554,6 @@ textarea {
     padding-left: 5% !important;
     padding-right: 5% !important;
   }
-/*subtotal*/
-.field-subtotal.registrant-field.field-registrant-1 {  
-   text-align: right;
-}
-.label-like{
-text-align: right;
-}
    
   .campaign-form:not(.legacy-form) .field-purchaseProtection .purchase-protection .purchase-protection-body p {}
 }
