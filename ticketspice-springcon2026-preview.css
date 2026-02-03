@@ -408,7 +408,7 @@ th#xa9974eb2f8ba44c04f76_cost {
   padding: 15px;
   border-radius: 4px;
   color: white;
-   margin-bottom:20px !important;
+  
   /* Assume white text on grey for readability */
 }
 
@@ -468,6 +468,11 @@ span.purchase-protection-covers__description {
 .field-html.registrant-field.field-registrant-7 iframe {
   margin: 0 auto !important;
   display: block;
+}
+
+
+.field-html registrant-field field-registrant-5{
+    margin-bottom:20px !important;
 }
 
 /* hiding these temporarily */
