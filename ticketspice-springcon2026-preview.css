@@ -301,7 +301,7 @@ section#billing-section label {
 .holds-coupon-code {
   background-color: #f0f0f0 !important;
   /* Light Grey */
-  padding: 20px !important;
+  padding: 20px 20px 15px 20px !important;
   border-radius: 8px;
   margin-bottom: 20px;
 }
@@ -312,6 +312,8 @@ section#billing-section label {
 }
 label#xd6b4c4a0f3dbc6eb6aaa {
     font-weight: bold !important;
+   font-size: 1.5rem;padding-left: .5rem;
+   
 }
 /* Coupon Code Input Area (Dark Grey) */
 .field-codeBox,
@@ -338,6 +340,7 @@ div#ticketBlock {
 
 #registrants>div.field-codeBox.registrant-field.field-registrant-0 {
   max-width: 100% !important;
+   padding: 4% 3% 3% 4%;
 }
 /*subtotal*/
 .field-subtotal.registrant-field.field-registrant-1 {
