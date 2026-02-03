@@ -1,0 +1,560 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Montserrat:wght@700&display=swap');
+
+/**
+ * TicketSpice Customization Template
+ * 
+ * AUTOMATED LOADING:
+ * The @import method is not supported by TicketSpice's CSS editor.
+ * Instead, use the "HTML" element in your page builder/header.
+ * 
+ * Paste the following code into an HTML block:
+ * <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+ * <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lptryan/springcon2026@main/ticketspice-custom.css">
+ * 
+ * ---------------------------------------------------------------------
+ * 
+ * MANUAL USAGE:
+ * If you prefer manual updates, copy the contents below this block into
+ * the "Custom CSS" field.
+ * 
+ * Reference: Use browser Dev Tools to find specific selectors.
+ */
+
+/* =========================================
+   1. VARIABLES (CSS Custom Properties)
+   ========================================= */
+:root {
+  /* Brand Colors */
+  --brand-primary: #000000;
+  /* Replace with brand color */
+  --brand-secondary: #333333;
+  --brand-accent: #ff0000;
+
+  /* Typography */
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Layout */
+  --page-max-width: 1200px;
+  --section-padding: 40px;
+}
+
+/* =========================================
+   2. GLOBAL RESETS & DEFAULTS
+   ========================================= */
+body {
+  font-family: var(--font-body) !important;
+  color: #333;
+  line-height: 1.6;
+
+  /* BACKGROUND ANIMATION SETUP */
+  min-height: 100vh;
+  position: relative;
+  background-color: transparent !important;
+  /* Ensure layers show through */
+}
+
+/* NUCLEAR TRANSPARENCY OPTION */
+/* Force all potential wrappers to be clear so body background shows */
+html,
+.wrapper,
+.container,
+.main-content,
+#page-wrapper,
+div[class*="layout"],
+div[class*="content"],
+div[class*="section"],
+div[class*="row"] {
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+/* Base Gradient Layer */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom, #575aa7, #7f2e8b);
+  z-index: -10;
+}
+
+/* Pulse Gradient Layer (Darker) */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #3b3e75, #592061);
+  z-index: -1;
+  opacity: 0;
+  animation: gradient-pulse 4s ease-in-out infinite alternate;
+}
+
+@keyframes gradient-pulse {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+a {
+  color: #007bff !important;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #0056b3 !important;
+}
+
+/* =========================================
+   3. TYPOGRAPHY
+   ========================================= */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading) !important;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--brand-primary);
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #FF00FF !important;
+  /* DEBUG: Bright Pink */
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+/* =========================================
+   4. LAYOUT COMPONENTS
+   ========================================= */
+
+/* Header / Banner Area */
+/* Note: Inspect element to find the specific header class used by your theme */
+/* Header / Banner Area */
+/* Note: Inspect element to find the specific header class used by your theme */
+.header-container,
+div[class*="header"],
+.banner__background,
+.banner {
+  background-color: transparent !important;
+  background: transparent !important;
+  color: #000000 !important;
+  /* Black Text */
+}
+
+.banner__background h1,
+.banner__background h2,
+.banner h1,
+.banner h2,
+.banner_content h1,
+.banner__content h1,
+.banner__holds-content h1,
+.banner__holds-content h1 span,
+.field-banner h1,
+.field-banner h1 span {
+  color: #FFFFFF !important;
+}
+
+/* this is for the field/location banner */
+.field-banner.banner_xef6d8b125ca6f859b727.field-banner--fw {
+  min-height: auto !important;
+}
+
+.field-banner .banner__holds-content {
+  padding-top: 40px;
+  padding-bottom: 0px !important;
+
+}
+
+.app-container :not(.swal2-container) .field-banner .banner__holds-content,
+.form-preview :not(.swal2-container) .field-banner .banner__holds-content {
+  padding-top: 40px;
+  padding-bottom: 0px !important;
+}
+
+.custom-lpticketspice-setting {
+  text-align: center !important;
+  color: #FFFFFF;
+}
+
+.custom-lpticketspice-date {
+  font-size: 2rem;
+  font-weight: bold;
+  font-style: normal;
+  text-align: center !important;
+  margin-bottom: 0px;
+}
+
+.custom-lpticketspice-location {
+  color: #FFFFFF;
+  font-size: 1.75rem;
+  font-weight: normal;
+  font-style: normal;
+  text-align: center !important;
+}
+
+
+/* logo holder block */
+div.form-header.header-type-logo.logo-align-center .holds-image {
+  background: linear-gradient(to right, #172856, #284086) !important;
+}
+
+/* Content Wrapper */
+.wrapper,
+.container {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+}
+
+/* =========================================
+   5. TICKETSPICE SPECIFIC COMPONENTS
+   ========================================= */
+/* Target specific TicketSpice elements here. 
+   Common patterns often include 'txn-', 'field-', or 'btn-' prefixes.
+*/
+
+/* --- SECTION HIGHLIGHTS (DEBUG/CUSTOM) --- */
+
+/* Registrants Section */
+section#registrants {
+  background-color: transparent !important;
+
+  border-radius: 8px;
+  margin-bottom: 20px;
+  margin-top: 0px !important;
+  padding-top: 0px !important;
+  padding-left: 9% !important;
+  padding-right: 9% !important;
+}
+
+.app-container :not(.swal2-container) section#registrants {
+  background-color: transparent !important;
+  margin-top: 0px !important;
+}
+
+/* Billing Section */
+section#billing-section {
+  background-color: transparent !important;
+  color: white !important;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+section#billing-section h1 {
+  color: #FFFFFF !important;
+}
+
+section#billing-section label {
+  color: #ffffff !important;
+}
+
+#billing-section>div:nth-child(5)>div.credit-card-billing.sub-field>div>div {
+  color: red !important;
+  background-color: #ffffff !important;
+}
+
+/* Submit Button Row */
+.submit-row {
+  background-color: pink !important;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+/* WC Logos Container */
+.holds-wc-logos {
+  max-width: 100% !important;
+  background-color: #FFFFFF !important;
+  padding: 10px;
+  text-align: center;
+}
+
+/* =========================================
+   7. COUPON CODE SECTION
+   ========================================= */
+/* Target the coupon section container */
+/* =========================================
+   7. COUPON CODE SECTION
+   ========================================= */
+/* Target the coupon section container */
+.holds-coupon-code {
+  background-color: #f0f0f0 !important;
+  /* Light Grey */
+  padding: 20px !important;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.holds-coupon-code label {
+  color: #333333 !important;
+  /* Switch text to dark for light bg */
+}
+label#xd6b4c4a0f3dbc6eb6aaa {
+    font-weight: bold !important;
+}
+/* Coupon Code Input Area (Dark Grey) */
+.field-codeBox,
+.code-box-wrapper {
+  background: linear-gradient(to right, #172856, #284086) !important;
+
+  padding: 15px;
+  border-radius: 4px;
+  color: white;
+  margin-bottom: 0px;
+}
+
+/* Specific Dimension Control for Ticket Block Wrapper */
+div#ticketBlock {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding-left: 9% !important;
+  padding-right: 9% !important;
+  box-sizing: border-box;
+  margin-bottom: 0px !important;
+  padding-bottom: 0px !important;
+  /* Ensure padding doesn't overflow width */
+}
+
+#registrants>div.field-codeBox.registrant-field.field-registrant-0 {
+  max-width: 100% !important;
+}
+/*subtotal*/
+.field-subtotal.registrant-field.field-registrant-1 {
+    background-color: #ffffff;
+   max-width: 100% !important;
+}
+/* =========================================
+   8. TICKET BLOCK (transparent)
+   ========================================= */
+.ticket-block,
+.level-container,
+.ticket-level {
+  background-color: transparent !important;
+  /* Light Green */
+  color: #000000 !important;
+  /* Black Text */
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+div#ticketBlock {
+  background-color: transparent !important;
+}
+
+#ticketBlock>table>thead>tr {
+  background: linear-gradient(to right, #172856, #284086) !important;
+}
+
+.campaign-form:not(.legacy-form) .ticket-block table.holds-tickets th.description {
+  color: #FFFFFF !important;
+  background: linear-gradient(to right, #172856, #20346E) !important;
+
+
+}
+
+th#xa9974eb2f8ba44c04f76_cost {
+  color: #FFFFFF !important;
+}
+
+th#xa9974eb2f8ba44c04f76_cost {
+  background: linear-gradient(to right, #20346E, #284086) !important;
+}
+
+.ticket-block h4,
+.ticket-block .ticket-cost {
+  color: #000000 !important;
+}
+
+.ticket-block tr.ticket-type p {
+  font-size: .8em;
+  color: #000000 !important;
+}
+
+.ticket-fee {
+  color: #000000 !important;
+}
+
+/* this is the tickets inside ticketblock */
+.campaign-form:not(.legacy-form) .ticket-block table.holds-tickets {
+  background-color: #f5f4f1 !important;
+  color: #000000 !important;
+}
+
+/* Purchase Protection Field */
+.field-purchaseProtection.registrant-field.field-registrant-5 {
+  background-color: grey !important;
+  padding: 15px;
+  border-radius: 4px;
+  color: white;
+  /* Assume white text on grey for readability */
+}
+
+/* this is the purchase protection block */
+.campaign-form:not(.legacy-form) .field-purchaseProtection .purchase-protection {
+  background: linear-gradient(to right, rgba(23, 40, 86, 0.85), rgba(40, 64, 134, 0.85)) !important;
+  backdrop-filter: blur(5px) !important;
+  -webkit-backdrop-filter: blur(5px) !important;
+}
+
+.campaign-form:not(.legacy-form) .field-purchaseProtection .purchase-protection .purchase-protection-header {
+  background: linear-gradient(to right, #172856, #284086) !important;
+  color: #FFFFFF !important;
+}
+
+.purchase-protection-body {
+  color: #FFFFFF !important;
+}
+
+span.purchase-protection-covers__description {
+  color: #ffffff;
+}
+
+.purchase-protection__disclaimer {
+  color: #ffffff;
+}
+
+.campaign-form:not(.legacy-form) .field-purchaseProtection .purchase-protection .purchase-protection-body .purchase-protection-option label {
+  max-width: 100%;
+  padding: 20px;
+  color: #ffffff;
+}
+
+.disclaimer {
+  color: #ffffff !important;
+}
+
+.campaign-form:not(.legacy-form) .field-purchaseProtection .purchase-protection .purchase-protection-header .recommended {
+  color: #ffffff;
+}
+
+/* Fix Iframe Centering in Field Registrant 5, 6, 7 */
+.field-html.registrant-field.field-registrant-5,
+.field-html.registrant-field.field-registrant-5 .html,
+.field-html.registrant-field.field-registrant-6,
+.field-html.registrant-field.field-registrant-6 .html,
+.field-html.registrant-field.field-registrant-7,
+.field-html.registrant-field.field-registrant-7 .html {
+  width: 100% !important;
+  text-align: center !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.field-html.registrant-field.field-registrant-5 iframe,
+.field-html.registrant-field.field-registrant-6 iframe,
+.field-html.registrant-field.field-registrant-7 iframe {
+  margin: 0 auto !important;
+  display: block;
+}
+
+/* hiding these temporarily */
+.field-html.registrant-field.field-registrant-5 iframe,
+.field-html.registrant-field.field-registrant-6 iframe {
+
+}
+
+/* =========================================
+   9. BUTTON STYLES
+   ========================================= */
+/* Target all buttons */
+button,
+.btn,
+input[type="submit"],
+input[type="button"],
+.holds-coupon-code button {
+  background-color: #007bff !important;
+  /* Bright Blue */
+  color: white !important;
+  border: none !important;
+  padding: 12px 24px !important;
+  border-radius: 4px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5) !important;
+  transition: all 0.3s ease;
+}
+
+button:hover,
+.btn:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover {
+  background-color: #0056b3 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Form Fields */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+/* =========================================
+   9. MEDIA QUERIES
+   ========================================= */
+@media (max-width: 768px) {
+  .mobile-only {
+    display: block;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* Mobile Ticket Block Override */
+  div#ticketBlock {
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+  }
+
+  .app-container :not(.swal2-container) section#registrants,
+  .form-preview :not(.swal2-container) section#registrants {
+
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+  }
+
+  section#registrants {
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+  }
+
+  .campaign-form:not(.legacy-form) .field-purchaseProtection .purchase-protection .purchase-protection-body p {}
+}
