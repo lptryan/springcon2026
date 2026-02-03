@@ -11,14 +11,6 @@
  * <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Montserrat:wght@700&display=swap" rel="stylesheet">
  * <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lptryan/springcon2026@main/ticketspice-custom.css">
  * 
- * ---------------------------------------------------------------------
- * 
- * MANUAL USAGE:
- * If you prefer manual updates, copy the contents below this block into
- * the "Custom CSS" field.
- * 
- * Reference: Use browser Dev Tools to find specific selectors.
- */
 
 /* =========================================
    1. VARIABLES (CSS Custom Properties)
@@ -347,6 +339,7 @@ div#ticketBlock {
 .field-subtotal.registrant-field.field-registrant-1 {
     background-color: #ffffff;
    max-width: 100% !important;
+   padding-left: 7.5%;
 }
 
 /* =========================================
@@ -560,6 +553,13 @@ textarea {
     padding-left: 5% !important;
     padding-right: 5% !important;
   }
-
+/*subtotal*/
+.field-subtotal.registrant-field.field-registrant-1 {  
+   text-align: right;
+}
+.label-like{
+text-align: right;
+}
+   
   .campaign-form:not(.legacy-form) .field-purchaseProtection .purchase-protection .purchase-protection-body p {}
 }
