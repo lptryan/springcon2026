@@ -408,7 +408,7 @@ th#xa9974eb2f8ba44c04f76_cost {
   padding: 15px;
   border-radius: 4px;
   color: white;
-   margin-bottom:20px;
+   margin-bottom:20px !important;
   /* Assume white text on grey for readability */
 }
 
